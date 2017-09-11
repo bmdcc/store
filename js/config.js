@@ -17,10 +17,25 @@ $(function() {
 	    cartStyle: "div",
 
 	    // how simpleCart should checkout, see the checkout reference for more info
-	    checkout: {
-	        type: "PayPal" ,
-	        email: "admin@toysdownunder.com"
-	    },
+	    //checkout: {
+	    //    type: "PayPal" ,
+	    //    email: "admin@toysdownunder.com"
+		//},
+		
+		checkout: { 
+			type: "SendForm" , 
+			url: "https://docs.google.com/forms/d/e/1FAIpQLScWbu4dV3UZR3iu92RMSqk5TMPpEIFFx8-NJ2rPcuMMr5zeSg/viewform?usp=pp_url&entry.618891356&entry.548877670&entry.1323246545=$32.00" ,
+	
+			// http method for form, "POST" or "GET", default is "POST"
+			method: "GET" , 
+	
+			// url to return to on successful checkout, default is null
+			success: "success.html" , 
+	
+			// url to return to on cancelled checkout, default is null
+			cancel: "cancel.html" ,
+				
+		}, 
 
 	    // set the currency, see the currency reference for more info
 	    currency: "AUD",
