@@ -20,7 +20,7 @@ $(function() {
 	    //checkout: {
 	    //    type: "PayPal" ,
 	    //    email: "admin@toysdownunder.com"
-		//},
+//},
 		
 		checkout: { 
 			type: "SendForm" , 
