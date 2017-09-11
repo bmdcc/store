@@ -101,7 +101,7 @@ $(function() {
 	});
 
 	simpleCart.bind( 'beforeCheckout' , function( data ){
-		data["entry.1323246545"] = "55.00";
+		data["entry.1323246545"] = simpleCart.grandTotal();
 	  });
 
 });
