@@ -100,4 +100,9 @@ $(function() {
 
 	});
 
+	simpleCart.bind( 'beforeCheckout' , function( data ){
+		alert("Before Checkout");
+		data["entry.1323246545"] = "55.00";
+	  });
+
 });
