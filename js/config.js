@@ -78,6 +78,8 @@ $(function() {
 		// numder of products per row (accepts 1, 2 or 3)
 		numColumns : 3,
 
+		spreadsheetID: "19CKmCsNBOSVjQHE-SEpeo2KISfETdofEslQujaNNMgk",
+		
 		// name of JSON file, located in directory root
 		JSONFile : "products.json"
 
