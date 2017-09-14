@@ -103,7 +103,18 @@ $(function() {
 	simpleCart.bind( 'beforeCheckout' , function( data ){
 		data["entry.1323246545"] = simpleCart.grandTotal();
 
-		data["entry.103449169"] = "line1\nline2\nline3 and line3";
+		var order;
+		var count;
+		var options;
+		var optionsArr;
+
+		for (count = 1; count <= data.itemCount) {
+			options = data["item_options_" + count]
+			optionsArr = options.split(", ");
+			order = order + data.itemCount + " " + data["item_quantity_" + count] + " " + data["item_name_" + count] +  " " + optionsArr[1] + "/n";
+		}
+
+		data["entry.103449169"] = order;
 	  });
 
 });
