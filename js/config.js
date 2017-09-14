@@ -102,6 +102,8 @@ $(function() {
 
 	simpleCart.bind( 'beforeCheckout' , function( data ){
 		data["entry.1323246545"] = simpleCart.grandTotal();
+
+		data["entry.103449169"] = "line1\nline2\nline3 and line3";
 	  });
 
 });
