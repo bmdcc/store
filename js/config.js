@@ -103,7 +103,7 @@ $(function() {
 	simpleCart.bind( 'beforeCheckout' , function( data ){
 		data["entry.1323246545"] = simpleCart.grandTotal();
 
-		var order;
+		var order = "";
 		var count;
 		var options;
 		var optionsArr;
@@ -111,7 +111,7 @@ $(function() {
 		for (count = 1; count <= data.itemCount; count++) {
 			options = data["item_options_" + count]
 			optionsArr = options.split(", ");
-			order = order + data["item_quantity_" + count] + " " + data["item_name_" + count] +  " " + optionsArr[1] + "\n";
+			order = order + data["item_quantity_" + count] + " - " + data["item_name_" + count] +  " - " + optionsArr[1] + "\n";
 		}
 
 		data["entry.103449169"] = order;
