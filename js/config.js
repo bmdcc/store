@@ -108,7 +108,7 @@ $(function() {
 		var options;
 		var optionsArr;
 
-		for (count = 1; count <= data.itemCount) {
+		for (count = 1; count <= data.itemCount; count++) {
 			options = data["item_options_" + count]
 			optionsArr = options.split(", ");
 			order = order + data.itemCount + " " + data["item_quantity_" + count] + " " + data["item_name_" + count] +  " " + optionsArr[1] + "/n";
