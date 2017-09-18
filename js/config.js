@@ -101,7 +101,11 @@ $(function() {
 	});
 
 	simpleCart.bind( 'beforeCheckout' , function( data ){
-		data["entry.1323246545"] = simpleCart.grandTotal();
+
+		var total = simpleCart.grandTotal();
+		total.toFixed(2);
+		total = "$" + total; 
+		data["entry.1323246545"] = total;
 
 		var order = "";
 		var count;
